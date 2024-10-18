@@ -1,7 +1,7 @@
 import "./index.css";
 import { useCallback, useRef, useState } from "react";
 
-export default function DragToReorder() {
+export default function DragToReOrder() {
   let destinationValue = "";
   let originValue = "";
   const containerRef = useRef<HTMLDivElement | null>(null);

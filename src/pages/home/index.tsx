@@ -1,9 +1,9 @@
-import DragToReorder from "../../components/drag-to-reorder";
+import DragToReOrder from "../../components/drag-to-reorder";
 
 export default function Home() {
   return (
     <div>
-      <DragToReorder />
+      <DragToReOrder />
     </div>
   );
 }
