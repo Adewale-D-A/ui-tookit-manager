@@ -1,0 +1,23 @@
+.aad-dr-w-full{
+    width: 100%;
+}
+.aad-dr-d-grid {
+    width: 100%;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: auto auto auto;
+}
+
+.add-dr-grabbable {
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+ /* (Optional) Apply a "closed-hand" cursor during drag operation. */
+.add-dr-grabbable:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
