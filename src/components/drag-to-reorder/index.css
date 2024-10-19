@@ -14,6 +14,13 @@
 .aad-dr-text{
 font-size:xx-large;
 }
+.aad-dr-input-field{
+    all: unset;
+    width: calc(100% - 24px);
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(61, 61, 182);
+}
 .aad-dr-bin-icon-button{
     all: unset;
     opacity: 0.6;
@@ -31,7 +38,21 @@ font-size:xx-large;
         width: 1.5rem /* 24px */;
         height: 1.5rem /* 24px */;
 }
+.aad-dr-text-field-icon-button{
+    all: unset;
+    position: absolute;
+    right: 1.8rem;
+    bottom: 2px;
 
+}
+.aad-dr-text-field-icon-button:hover{
+    scale: 1.25;
+    transition: all;
+    color: rgb(61, 61, 182);
+}
+.add-dr-input-icon-enabled{
+    color: rgb(61, 61, 182);
+}
 .add-dr-grabbable {
     cursor: move; /* fallback if grab cursor is unsupported */
     cursor: grab;
