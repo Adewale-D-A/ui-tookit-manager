@@ -1,22 +1,6 @@
-import { useState } from "react";
-import DragToReOrder from "../../components/drag-to-reorder";
 import ImageCarousel from "../../components/carousel";
 
-export default function Home() {
-  const [dataset, setDataset] = useState<
-    { id: string; image?: string; text?: string; inputFieldText?: string }[]
-  >([
-    { id: "rand-1", image: "https://placehold.co/40x40/0fb/fff?text=1" },
-    { id: "rand-2", image: "https://placehold.co/40x40/0fb/fff?text=2" },
-    { id: "rand-3", image: "https://placehold.co/40x40/0fb/fff?text=3" },
-    { id: "rand-4", image: "https://placehold.co/40x40/0fb/fff?text=4" },
-    { id: "rand-5", image: "https://placehold.co/40x40/0fb/fff?text=5" },
-    {
-      id: "rand-6",
-      image: "https://placehold.co/40x40/0fb/fff?text=6",
-    },
-  ]);
-
+export default function ImageCarouselExample() {
   const images = [
     {
       url: "https://s3-alpha-sig.figma.com/img/3e49/7f40/62a7fbd85c8797c85255038d926c9f8a?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=G1ie3pvUZapx3fm8HskClpG0QM1tT8Pz0U5IaWoIAxKbTcX2kzl9azloQD4oASI1n8cfS99To5jy9ixbjI19Fx0HbgcQ-PUM~tplTg-AsGCdAefoOl~2jzP50RYnchnsRf7NYozxThl4V-L64rH5gAwOsBRKjQWetpVVjb6ro8sgFS0bWghCSY0NXJVoiMjd~DcPd3NUlLl8zoTCMZViwAh0IN1yh04iRjgnhsgpfTDoUJ62udvbuXwdgSYmZRBOnvAV5t-y1hmZdTF9isZpvFSo6x3HPefn8SmNSS~kE7T2NOpe9Eg1fiHHUdI38b15MpZx1RJjb79Uvl~CFN3uOA__",
@@ -30,24 +14,13 @@ export default function Home() {
     },
   ];
   return (
-    <div className="">
-      {/* <DragToReOrder
-        data={dataset}
-        setData={setDataset}
-        allowDelete={true}
-        inputConfigration={{
-          allowField: true,
-          rows: 2,
-        }}
-      /> */}
-      <div>
-        <ImageCarousel
-          images={images?.map((item) => ({
-            url: item?.url,
-            child: item?.child,
-          }))}
-        />
-      </div>
+    <div>
+      <ImageCarousel
+        images={images?.map((item) => ({
+          url: item?.url,
+          child: item?.child,
+        }))}
+      />
     </div>
   );
 }
