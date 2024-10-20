@@ -86,7 +86,7 @@ export default function ImageCarousel({
           onClick={() => showPrevImage()}
           className={classnames?.navigationButton || "aad-ic-nav-btn"}
         >
-          <ChevronLeft />
+          <ChevronLeft className="aad-ic-icon" />
         </button>
         <button
           type="button"
@@ -94,7 +94,7 @@ export default function ImageCarousel({
           onClick={() => showNextImage()}
           className={classnames?.navigationButton || "aad-ic-nav-btn"}
         >
-          <ChevronRight />
+          <ChevronRight className="aad-ic-icon" />
         </button>
       </div>
       <div className={classnames?.childContainer || "aad-ic-children-ctn"}>

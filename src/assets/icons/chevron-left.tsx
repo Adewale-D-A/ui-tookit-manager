@@ -6,7 +6,7 @@ export default function ChevronLeft({ className }: { className?: string }) {
       viewBox="0 0 24 24"
       strokeWidth={6}
       stroke="currentColor"
-      className={className || "aad-icon"}
+      className={className || "aad-ic-icon"}
     >
       <path
         strokeLinecap="round"
