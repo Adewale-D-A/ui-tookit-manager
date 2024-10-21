@@ -41,15 +41,16 @@ export default function Home() {
           rows: 2,
         }}
       /> */}
-      {/* <div>
+      <div>
         <ImageCarousel
           images={images?.map((item) => ({
             url: item?.url,
             child: item?.child,
           }))}
+          autoTransitionOptions={{ allow: true, seconds: 8 }}
         />
-      </div> */}
-      <RouteMapManager />
+      </div>
+      {/* <RouteMapManager /> */}
     </div>
   );
 }

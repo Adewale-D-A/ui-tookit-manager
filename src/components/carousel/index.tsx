@@ -1,4 +1,4 @@
-import { ReactNode, useCallback, useState } from "react";
+import { ReactNode, useCallback, useEffect, useState } from "react";
 import ChevronLeft from "../../assets/icons/chevron-left";
 import ChevronRight from "../../assets/icons/chevron-right";
 import "./index.css";
@@ -6,6 +6,7 @@ import "./index.css";
 export default function ImageCarousel({
   images,
   classnames,
+  autoTransitionOptions,
 }: {
   images: { url: string; child?: ReactNode }[];
   classnames?: {
@@ -19,7 +20,12 @@ export default function ImageCarousel({
     navigationButton?: string;
     childContainer?: string;
   };
+  autoTransitionOptions?: {
+    allow: boolean;
+    seconds: number;
+  };
 }) {
+  const [seconds, setSeconds] = useState(autoTransitionOptions?.seconds || 5);
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
 
   // productsArray next function
@@ -43,6 +49,20 @@ export default function ImageCarousel({
   const changeImage = useCallback((index: number) => {
     setCurrentImgIndex(index);
   }, []);
+
+  //set countdown timer
+  useEffect(() => {
+    if (autoTransitionOptions?.allow) {
+      if (seconds > 0) {
+        setTimeout(() => setSeconds(seconds - 1), 1000);
+      } else {
+        setSeconds(autoTransitionOptions?.seconds || 5);
+        setCurrentImgIndex((prev) =>
+          prev + 1 > images?.length - 1 ? 0 : prev + 1
+        );
+      }
+    }
+  });
   return (
     <div
       className={
