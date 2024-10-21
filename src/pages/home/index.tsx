@@ -1,6 +1,7 @@
 import { useState } from "react";
 import DragToReOrder from "../../components/drag-to-reorder";
 import ImageCarousel from "../../components/carousel";
+import RouteMapManager from "../../components/map-route-manager";
 
 export default function Home() {
   const [dataset, setDataset] = useState<
@@ -40,14 +41,15 @@ export default function Home() {
           rows: 2,
         }}
       /> */}
-      <div>
+      {/* <div>
         <ImageCarousel
           images={images?.map((item) => ({
             url: item?.url,
             child: item?.child,
           }))}
         />
-      </div>
+      </div> */}
+      <RouteMapManager />
     </div>
   );
 }
