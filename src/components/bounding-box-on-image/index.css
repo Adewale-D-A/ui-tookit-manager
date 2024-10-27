@@ -1,0 +1,17 @@
+
+.aad-itt-w-full{
+    width: 100%;
+}
+/* crop disease and annotation image overlay  */
+.aad-itt-canvas-overlay-ctn {
+    position: relative;
+  }
+.aad-itt-canvas-coords-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  /* hide canvas and image property container  */
+.aad-itt-d-none {
+    display: none;
+  }

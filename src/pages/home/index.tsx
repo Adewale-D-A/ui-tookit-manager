@@ -2,6 +2,7 @@ import { useState } from "react";
 import DragToReOrder from "../../components/drag-to-reorder";
 import ImageCarousel from "../../components/carousel";
 import RouteMapManager from "../../components/map-route-manager";
+import BoundingBoxOnImage from "../../components/bounding-box-on-image";
 
 export default function Home() {
   const [dataset, setDataset] = useState<
@@ -41,7 +42,7 @@ export default function Home() {
           rows: 2,
         }}
       /> */}
-      <div>
+      {/* <div>
         <ImageCarousel
           images={images?.map((item) => ({
             url: item?.url,
@@ -49,8 +50,11 @@ export default function Home() {
           }))}
           autoTransitionOptions={{ allow: true, seconds: 8 }}
         />
-      </div>
+      </div> */}
       {/* <RouteMapManager /> */}
+      <div>
+        <BoundingBoxOnImage />
+      </div>
     </div>
   );
 }
