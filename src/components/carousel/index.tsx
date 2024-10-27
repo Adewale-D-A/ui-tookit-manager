@@ -25,6 +25,7 @@ export default function ImageCarousel({
     seconds: number;
   };
 }) {
+  const [mouseOver, setMouseOver] = useState(false);
   const [seconds, setSeconds] = useState(autoTransitionOptions?.seconds || 5);
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
 
@@ -52,7 +53,7 @@ export default function ImageCarousel({
 
   //set countdown timer
   useEffect(() => {
-    if (autoTransitionOptions?.allow) {
+    if (autoTransitionOptions?.allow && !mouseOver) {
       if (seconds > 0) {
         setTimeout(() => setSeconds(seconds - 1), 1000);
       } else {
@@ -68,6 +69,8 @@ export default function ImageCarousel({
       className={
         classnames?.parentContainer || "aad-ic-parent-ctn add-ic-bg-black"
       }
+      onMouseEnter={() => setMouseOver(true)}
+      onMouseLeave={() => setMouseOver(false)}
     >
       <img
         src={images[currentImgIndex]?.url}
