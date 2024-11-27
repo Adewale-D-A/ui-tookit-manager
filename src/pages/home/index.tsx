@@ -3,6 +3,7 @@ import DragToReOrder from "../../components/drag-to-reorder";
 import ImageCarousel from "../../components/carousel";
 import RouteMapManager from "../../components/map-route-manager";
 import BoundingBoxOnImage from "../../components/bounding-box-on-image";
+import PassKey from "../../components/passkey";
 
 export default function Home() {
   const [dataset, setDataset] = useState<
@@ -53,7 +54,8 @@ export default function Home() {
       </div> */}
       {/* <RouteMapManager /> */}
       <div>
-        <BoundingBoxOnImage />
+        {/* <BoundingBoxOnImage /> */}
+        <PassKey />
       </div>
     </div>
   );
